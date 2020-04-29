@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Sale Record</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+    <link rel="stylesheet" href="css/sell.css">
+     
+
+</head>
+<body onload="load();">
+    <!-- debug -->
+    <div id="myModal" class="modal"> 
+        <!-- Modal content -->
+        <div class="modal-content">
+          <span class="close">&times;</span>
+          <center>
+          <a href="boss/" target="_blank">boss</a></br>
+          <a href="mobile.html" target="_blank">mobile</a></br>
+          <a href="pc.html" target="_blank">Pc</a></br>
+          <a href="order.html" target="_blank">order</a></br>
+          <a href="Sales history.html" target="_blank">sales history</a>
+         </center>
+        </div>
+       </div>
+      <!-- เพิ่ม array -->
+     
+        <div class="icon-bar">  
+            &nbsp;&nbsp;&nbsp;<div href="#" id="h_icon">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Sale Record</div> 
+                <div class="w3-bar w3-white w3-center w3-opacity-min w3-hover-opacity-off" style="padding:2px;"></div>  
+                <a href="#" class="active" onclick="exportTableToCSV('db.csv')"><img src="img/excal.png" width="50px"></a> </a>
+                <a href="../coffee/charts1.php" style="width:300px" class="w3-left w3-bar-item w3-button w3-hover-white"><h3>Graph</h3></a>
+                
+            </div>
+              
+            <div class="div-bar">
+              <!-- <a href="#" class="activediv" onclick=""><img class = "clear_button"src="img/wrong.png" width="50px"></a>  -->
+              <select class="select" onchange="select_input =this.value;">
+                    <option value="0">name</option>
+                    <option value="1">year</option>
+                    <option value="2">month</option>
+                    <option value="3">day</option>
+                  </select>
+              <input class="tinput"type="text" id="myInput" onkeyup="auto(select_input)" placeholder="Search" title="Type in a name">
+          </div>
+    </table>
+<section id="products" class="products">
+    <table id="listorder1">
+        <tr class="tr1">
+            <td id ="head_table"class="td_list">Name</td>
+            <td id ="head_table"class="td_list">Year</td>
+            <td id ="head_table"class="td_list">Month</td>
+            <td id ="head_table"class="td_list">day</td>
+            <td id ="head_table"class="td_list">Cost</td>
+            <td id ="head_table"class="td_list">H/Min/Sec</td>
+        </tr>
+    </table>
+    <table id="listorder"></table>
+    <div id="total" class="div_total"></div>
+</section>   
+    
+    <script src="db/data2.js"></script>
+    <script src="db/history.js"></script>
+    <script src="java/sell.js"></script>
+    
+   <!-- <div class="w3-bottom w3-hide-small">
+        
+    
+      </div>
+     <div class="w3-bar w3-white w3-center w3-opacity-min w3-hover-opacity-off" style="padding:1px;">
+        <a href="pc.html" style="width:40%" class="w3-left w3-bar-item w3-button w3-hover-black "><h4>Menu</h4></a>
+   Navbar (sticky bottom) 
+        <a href="order.html" style="width:40%" class="w3-right w3-bar-item w3-button w3-hover-black"><h4>Log in</h4></a>
+       </div> --> 
+</body>
+</html>
